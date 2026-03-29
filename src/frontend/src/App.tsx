@@ -306,11 +306,9 @@ function Header() {
             className="flex items-center gap-3 flex-shrink-0"
             data-ocid="nav.link"
           >
-            <img
-              src="/assets/generated/aditattva-logo-transparent.dim_200x60.png"
-              alt="Aditattva Group"
-              className="h-10 lg:h-12 w-auto object-contain"
-            />
+            <span className="font-heading text-xl lg:text-2xl font-black tracking-[0.18em] text-white uppercase select-none">
+              ADITATTVA
+            </span>
           </a>
 
           {/* Desktop Nav */}
@@ -1280,11 +1278,9 @@ function Footer() {
         <div className="py-12 lg:py-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <img
-              src="/assets/generated/aditattva-logo-transparent.dim_200x60.png"
-              alt="Aditattva Group"
-              className="h-10 w-auto object-contain mb-4"
-            />
+            <span className="font-heading text-xl font-black tracking-[0.18em] text-white uppercase select-none block mb-4">
+              ADITATTVA
+            </span>
             <p className="text-sm leading-relaxed text-[#6B7785] mb-5">
               Engineering excellence and innovative infrastructure solutions
               across 12 global offices.
