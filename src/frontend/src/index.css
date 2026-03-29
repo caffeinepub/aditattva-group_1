@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+
+    /* Corporate Navy/Gold palette */
+    --navy-900: 0.175 0.042 243;
+    --navy-800: 0.208 0.052 240;
+    --navy-700: 0.265 0.062 237;
+    --gold: 0.718 0.128 74;
+    --gold-light: 0.82 0.1 74;
+    --page-bg: 0.937 0.01 243;
+
+    --background: 0.937 0.01 243;
+    --foreground: 0.175 0.042 243;
+    --card: 1 0 0;
+    --card-foreground: 0.175 0.042 243;
+    --popover: 1 0 0;
+    --popover-foreground: 0.175 0.042 243;
+    --primary: 0.718 0.128 74;
+    --primary-foreground: 0.175 0.042 243;
+    --secondary: 0.208 0.052 240;
+    --secondary-foreground: 0.985 0 0;
+    --muted: 0.88 0.015 243;
+    --muted-foreground: 0.52 0.02 243;
+    --accent: 0.718 0.128 74;
+    --accent-foreground: 0.175 0.042 243;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.875 0.018 243;
+    --input: 0.875 0.018 243;
+    --ring: 0.718 0.128 74;
+    --chart-1: 0.646 0.222 41.116;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+    --sidebar: 0.208 0.052 240;
+    --sidebar-foreground: 0.985 0 0;
+    --sidebar-primary: 0.718 0.128 74;
+    --sidebar-primary-foreground: 0.175 0.042 243;
+    --sidebar-accent: 0.265 0.062 237;
+    --sidebar-accent-foreground: 0.985 0 0;
+    --sidebar-border: 0.265 0.062 237;
+    --sidebar-ring: 0.718 0.128 74;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer utilities {
+  .nav-link-hover {
+    position: relative;
+  }
+  .nav-link-hover::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: oklch(0.718 0.128 74);
+    transition: width 0.25s ease;
+  }
+  .nav-link-hover:hover::after,
+  .nav-link-hover.active::after {
+    width: 100%;
+  }
+
+  .service-card-hover {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .service-card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(10, 20, 30, 0.25);
+  }
+
+  .project-card-hover {
+    transition: transform 0.25s ease;
+  }
+  .project-card-hover:hover {
+    transform: translateY(-6px);
+  }
+
+  .gold-text {
+    color: oklch(0.718 0.128 74);
+  }
+
+  .gold-border {
+    border-color: oklch(0.718 0.128 74);
+  }
+
+  .navy-900-bg {
+    background-color: oklch(0.175 0.042 243);
+  }
+
+  .navy-800-bg {
+    background-color: oklch(0.208 0.052 240);
+  }
+}
