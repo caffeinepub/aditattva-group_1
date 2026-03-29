@@ -17,7 +17,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
-        heading: ["Montserrat", "Inter", "sans-serif"],
+        heading: ["Inter", "system-ui", "sans-serif"],
       },
       colors: {
         border: "oklch(var(--border))",
@@ -70,19 +70,6 @@ export default {
           border: "oklch(var(--sidebar-border))",
           ring: "oklch(var(--sidebar-ring))",
         },
-        navy: {
-          900: "#0B1B2A",
-          800: "#0E2233",
-          700: "#14324A",
-          600: "#1a3e5c",
-        },
-        gold: {
-          DEFAULT: "#C9A24A",
-          light: "#D4B56A",
-          dark: "#A8862E",
-        },
-        "page-bg": "#E9EEF3",
-        "on-dark": "#C9D3DD",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -91,8 +78,8 @@ export default {
       },
       boxShadow: {
         xs: "0 1px 2px 0 rgba(0,0,0,0.05)",
-        card: "0 4px 16px rgba(10,20,30,0.10)",
-        "card-hover": "0 12px 32px rgba(10,20,30,0.18)",
+        card: "0 4px 16px rgba(0,0,0,0.08)",
+        "card-hover": "0 12px 32px rgba(0,0,0,0.16)",
       },
       keyframes: {
         "accordion-down": {
@@ -103,15 +90,10 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        "fade-up": {
-          from: { opacity: "0", transform: "translateY(20px)" },
-          to: { opacity: "1", transform: "translateY(0)" },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "fade-up": "fade-up 0.6s ease-out forwards",
       },
     },
   },
